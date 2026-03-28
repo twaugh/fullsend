@@ -191,7 +191,7 @@ ADR 0002: [Building block 8](ADRs/0002-initial-fullsend-design.md#8-implementati
 
 ### 9. PR sandbox / CI mirror
 
-Execution environment for **Implement** and test loops, aligned to contributor/CI toolchains.
+Execution environment for **Implementation** and test loops, aligned to contributor/CI toolchains.
 ADR 0002: [Building block 9](ADRs/0002-initial-fullsend-design.md#9-pr-sandbox--ci-mirror).
 
 ### 10. Check failure triage
@@ -209,12 +209,12 @@ ADR 0002: [Building block 11](ADRs/0002-initial-fullsend-design.md#11-review-age
 Aggregates review verdicts and applies labels:
 
 - unanimous approve-merge → `ready-for-merge` (for the **current** PR head at the end of that round only)
-- unanimous rework → `ready-for-implement`
+- unanimous rework → `ready-to-implement`
 - split/conflicting (including conflicting security severities) → `requires-manual-review`
 - each **review run start** (including push-triggered re-review) clears **`ready-for-merge`** together with **`ready-for-review`** so merge approval is never stale after new commits
 ADR 0002: [Building block 12](ADRs/0002-initial-fullsend-design.md#12-coordinator-merge-algorithm).
 
 ### 13. Observability
 
-Traceability layer across issue, **Triage**, **Implement**, **Review**, checks, and merge for incident response and correlation across automation runs.
+Traceability layer across issue, **Triage**, **Implementation**, **Review**, checks, and merge for incident response and correlation across automation runs.
 ADR 0002: [Building block 13](ADRs/0002-initial-fullsend-design.md#13-observability).
