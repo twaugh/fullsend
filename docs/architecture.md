@@ -161,12 +161,12 @@ ADR 0002: [Building block 2](ADRs/0002-initial-fullsend-design.md#2-slash-comman
 
 ### 3. Label state machine guard
 
-Validates legal label transitions and enforces mutual exclusion and run-start reset semantics (triage/PR/review label stripping).
+Validates legal label transitions and enforces mutual exclusion and run-start reset semantics (triage start clears **`duplicate`** and downstream labels; PR/review strips per ADR).
 ADR 0002: [Building block 3](ADRs/0002-initial-fullsend-design.md#3-label-state-machine-guard).
 
 ### 4. Triage agent runtime
 
-Runs triage from issue `title`/`body` + GitHub-native attachments only; performs duplicate detection, readiness assessment, reproducibility, test artifact handoff, and can close duplicate issues.
+Runs triage from issue `title`/`body` + GitHub-native attachments only; each run starts with **`duplicate`** and other reset labels cleared; duplicate detection, readiness, reproducibility, test handoff; can close as duplicate again if still a match.
 ADR 0002: [Building block 4](ADRs/0002-initial-fullsend-design.md#4-triage-agent-runtime).
 
 ### 5. Duplicate / similarity search
